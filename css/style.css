@@ -1,0 +1,204 @@
+.container {
+  position: absolute;
+  top: 50px;
+}
+
+.green {
+	background: #cff19a;
+	border: solid 1px #7b9257;
+}
+
+.green:hover {
+  box-shadow: 0px 0px 20px 0px #81C2F2;
+}
+
+.green2 {
+	background: #fff;
+	border: solid 1px #35af80;
+}
+
+.green2:hover {
+  box-shadow: 0px 0px 20px 0px #499075;
+}
+
+.white {
+	background: #e4e4e4;
+	border: solid 1px #aaa;
+	float: right !important;
+}
+
+.white:hover {
+  box-shadow: 0px 0px 20px 0px #555;
+}
+
+.orange {
+    background: #ffe9e0;
+    border: solid 1px #e24000;
+    line-height: 130%;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff6609;
+    background-image: url(../img/preset.png);
+    background-size: 14px;
+    background-position: center;
+}
+
+.orange:hover {
+  box-shadow: 0px 0px 20px 0px #ff682c;
+}
+
+.toolbar{
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 800px;
+}
+
+.toolbar .btn {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+
+.toolbar .btnselect {
+  border-color: #1a403a;
+  background-color: #98f5e8;
+}
+
+.msgbox {
+  float: left;
+  font-size: 14px;
+  top: -10px;
+  position: absolute;
+  width: 600px;
+  padding-top: 8px;
+  font-family: monospace;
+  font-style: italic;
+  color: darkolivegreen;
+}
+
+.log-title {
+    position: absolute;
+    top: 470px;
+    width: 790px;
+    background: #f1dea9;
+    margin-bottom: 0px;
+    padding: 5px;
+	font-weight: bold;
+	font-family: monospace;
+}
+
+.log-content {
+    position: absolute;
+    top: 495px;
+    width: 790px;
+    background: #f1dea9;
+    min-height: 200px;
+    padding: 5px;
+	overflow: auto;
+	height: 180px;
+	font-family: monospace;
+	line-height: 130%;
+}
+
+.selfinteron {
+	background-image: url(../img/selfinter_on.png);
+}
+
+.selfinteroff {
+	background-image: url(../img/selfinter_off.png);
+}
+
+.trapson {
+	background-image: url(../img/traps_on.png);
+}
+
+.trapsoff {
+	background-image: url(../img/traps_off.png);
+}
+
+.maplegend {
+	position: absolute;
+    width: 450px;
+    top: 430px;
+    left: 350px;
+	font-family: monospace;
+    font-size: 16px;
+	text-align: right;
+}
+
+.legend-item {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin: 0px 4px 0px 10px;
+}
+
+#canvas {
+	top: 25px;
+	position: absolute;
+}
+
+#btnadd {
+  background-image: url(../img/polygon.jpg);
+  background-size: cover;
+}
+
+#btninfo {
+  background-image: url(https://www.freeiconspng.com/uploads/cute-ball-info-icon--i-like-buttons-3a-iconset--mazenl77-8.png);
+  background-size: 22px;
+  background-position: center;
+}
+
+#btnclear {
+  background-image: url(https://image.flaticon.com/icons/png/512/216/216658.png);
+  background-size: 22px;
+  background-position: center;
+}
+
+#btnunion {
+  background-image: url(../img/union.png);
+  background-size: cover;
+  margin-left: 15px;
+}
+
+#btninter {
+  background-image: url(../img/inter.png);
+  background-size: cover;
+}
+
+#btndif {
+  background-image: url(../img/dif.png);
+  background-size: cover;
+}
+
+#btnsymdif {
+  background-image: url(../img/symdif.png);
+  background-size: cover;
+}
+
+#btnselfinter {
+	background-position: center;
+	background-size: 26px;
+}
+
+#btntrap {
+	background-position: center;
+	background-size: 26px;
+}
+
+#btnpreset1 {
+	margin-left: 15px;
+}
+
+#mouse-position {
+  position: absolute;
+  top: 430px;
+  width: 200px;
+  font-family: monospace;
+  font-size: 15px;
+}

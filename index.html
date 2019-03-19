@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	<link rel="shortcut icon" type="image/png" href="img/polygon.jpg"/>
+    <title>Sector List - Implementation in JS</title>
+    <script type="text/javascript" src="js/processing-v1.4.8.min.js"></script>
+    <script type="text/javascript">
+      var active_command = 'add';
+    </script>
+	<script type="text/javascript" src="js/sectorlist/coordinates.js"></script>
+    <script type="text/javascript" src="js/sectorlist/sectorlist.js"></script>
+	<script type="text/javascript" src="js/sectorlist/priorityqueue.js"></script>
+	<script type="text/javascript" src="js/sectorlist/scanline.js"></script>
+	<script type="text/javascript" src="js/sectorlist/skiplist.js"></script>
+	<script type="text/javascript" src="js/sectorlist/sectorlist_utils.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css"></link>
+  </head>
+  <body onload='init();'>
+    <div class="toolbar">
+      <div class="btn green btnselect" id="btnadd" onclick="changeActiveCommand('add');" onmouseover="showHint('add');" onmouseout="hintToActiveCommand();"></div>
+      <div class="btn green" id="btninfo" onclick="changeActiveCommand('info');" onmouseover="showHint('info');" onmouseout="hintToActiveCommand();"></div>
+      <div class="btn green" id="btnclear" onclick="clearAll();" onmouseover="showHint('clear');" onmouseout="hintToActiveCommand();"></div>
+	  
+	  <div class="btn green2" id="btnunion" onclick="union();" onmouseover="showHint('union');" onmouseout="hintToActiveCommand();"></div>
+	  <div class="btn green2" id="btninter" onclick="intersection();" onmouseover="showHint('inter');" onmouseout="hintToActiveCommand();"></div>
+	  <div class="btn green2" id="btnsymdif" onclick="symdifference();" onmouseover="showHint('symdif');" onmouseout="hintToActiveCommand();"></div>
+	  
+	  <div class="btn orange" id="btnpreset1" onclick="loadPreset(1);" onmouseover="showHint('preset1');" onmouseout="hintToActiveCommand();">1</div>
+	  <div class="btn orange" id="btnpreset2" onclick="loadPreset(2);" onmouseover="showHint('preset2');" onmouseout="hintToActiveCommand();">2</div>
+	  <div class="btn orange" id="btnpreset3" onclick="loadPreset(3);" onmouseover="showHint('preset3');" onmouseout="hintToActiveCommand();">3</div>
+	  <div class="btn orange" id="btnpreset4" onclick="loadPreset(4);" onmouseover="showHint('preset4');" onmouseout="hintToActiveCommand();">4</div>
+	  <div class="btn orange" id="btnpreset5" onclick="loadPreset(5);" onmouseover="showHint('preset5');" onmouseout="hintToActiveCommand();">5</div>
+	  
+	  <div class="btn white selfinteroff" id="btnselfinter" onclick="changeSelfInter();" onmouseover="showHint('selfinter');" onmouseout="hintToActiveCommand();"></div>
+	  <div class="btn white trapsoff" id="btntrap" onclick="changeTrapsShow();" onmouseover="showHint('traps');" onmouseout="hintToActiveCommand();"></div>
+    </div>
+    <div class="container">
+      <canvas id="canvas" data-processing-sources="screen.pde"></canvas>
+    </div>
+	<div class="container">
+      <span id="mouse-position">Pos: </span>
+	  <div class="maplegend" id="legend"></div>
+	  <div class="msgbox" id="msg"></div>
+    </div>
+	<div class="container">
+	  <span class="log-title">Log for Sector List operations:</span>
+	  <span class="log-content" id="log-content"></span>
+	</div>
+  </body>
+</html>
